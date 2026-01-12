@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Repeat After Me</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: monospace;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    a {
+      color: red;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    input {
+      background: black;
+      border: 1px solid white;
+      color: white;
+      padding: 5px;
+      margin-top: 10px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LINK ARRIBA -->
+  <a href="https://example.com" target="_blank">LISTEN</a>
+
+  <br><br><br><br>
+
+  <!-- KEY ABAJO -->
+  <p>Key:</p>
+  <input type="password" id="key">
+  <br><br>
+  <button onclick="checkKey()">ENTER</button>
+
+  <script>
+    function checkKey() {
+      const correctKey = "parrot";
+      const input = document.getElementById("key").value;
+
+      if (input === correctKey) {
+        window.location.href = "secret.html";
+      } else {
+        alert("Wrong key.");
+      }
+    }
+  </script>
+
+</body>
+</html>
